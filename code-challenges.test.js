@@ -29,16 +29,16 @@
 // Add an expect method that compares the input to the expected values
 
 // ----- Syntax -----
-// describe("leetTranslator", () => {
-//     var secretCodeWord1 = "Lackadaisical"
-//     var secretCodeWord2 = "Gobbledygook"
-//     var secretCodeWord3 = "Eccentric"
-//     it("takes in a string and returns a coded message. The coded message converts 'a' to 4, 'e' to 3, 'i' to 1, and 'o' to 0.", () => {
-//         expect(leetTranslator(secretCodeWord1)).toEqual("L4ck4d41s1c4l")
-//         expect(leetTranslator(secretCodeWord2)).toEqual("G0bbl3dyg00k")
-//         expect(leetTranslator(secretCodeWord3)).toEqual("3cc3ntr1c")
-//     })
-// })
+describe("leetTranslator", () => {
+    var secretCodeWord1 = "Lackadaisical"
+    var secretCodeWord2 = "Gobbledygook"
+    var secretCodeWord3 = "Eccentric"
+    it("takes in a string and returns a coded message. The coded message converts 'a' to 4, 'e' to 3, 'i' to 1, and 'o' to 0.", () => {
+        expect(leetTranslator(secretCodeWord1)).toEqual("L4ck4d41s1c4l")
+        expect(leetTranslator(secretCodeWord2)).toEqual("G0bbl3dyg00k")
+        expect(leetTranslator(secretCodeWord3)).toEqual("3cc3ntr1c")
+    })
+})
 
 // Test fails with ReferenceError: leetTranslator is not defined
 
@@ -54,14 +54,14 @@
 // and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 // ----- Syntax -----
-// const leetTranslator = (string) => {
-//     // Regex pattern matching begins with /.../
-//     // Square brackets [] contain the upper and lowercase letters to match
-//     // The g switch performs a global search and replace.
-//     // The second parameter is the number that will replace the matched letter
-//     let l33tH4x0rString = string.replace(/[aA]/g, '4').replace(/[eE]/g, '3').replace(/[iI]/g, '1').replace(/[oO]/g, '0');
-//     return l33tH4x0rString
-// }
+const leetTranslator = (string) => {
+    // Regex pattern matching begins with /.../
+    // Square brackets [] contain the upper and lowercase letters to match
+    // The g switch performs a global search and replace.
+    // The second parameter is the number that will replace the matched letter
+    let l33tH4x0rString = string.replace(/[aA]/g, '4').replace(/[eE]/g, '3').replace(/[iI]/g, '1').replace(/[oO]/g, '0');
+    return l33tH4x0rString
+}
 
 // Test passes
 
@@ -82,18 +82,18 @@
 // Add an expect method that compares the input to the expected values
 
 // ----- Syntax -----
-// describe("findCommonLetter", () => {
-//     var arrayOfWords1 = ["Apple", "Banana", "Plum", "Orange", "Kiwi"]
-//     var letterA = "a"
-//     // Expected output: ["Apple", "Banana", "Orange"]
-//     var arrayOfWords2 = ["Mango", "Cherry", "Apricot", "Blueberry", "Peach"]
-//     var letterE = "e"
-//     // Expected output: ["Cherry", "Blueberry", "Peach"]
-//     it("takes in an array of words and a single letter and returns all the words that contain that particular letter", () => {
-//         expect(findCommonLetter(arrayOfWords1, letterA)).toEqual(["Apple", "Banana", "Orange"])
-//         expect(findCommonLetter(arrayOfWords2, letterE)).toEqual(["Cherry", "Blueberry", "Peach"])
-//     })
-// })
+describe("findCommonLetter", () => {
+    var arrayOfWords1 = ["Apple", "Banana", "Plum", "Orange", "Kiwi"]
+    var letterA = "a"
+    // Expected output: ["Apple", "Banana", "Orange"]
+    var arrayOfWords2 = ["Mango", "Cherry", "Apricot", "Blueberry", "Peach"]
+    var letterE = "e"
+    // Expected output: ["Cherry", "Blueberry", "Peach"]
+    it("takes in an array of words and a single letter and returns all the words that contain that particular letter", () => {
+        expect(findCommonLetter(arrayOfWords1, letterA)).toEqual(["Apple", "Banana", "Orange"])
+        expect(findCommonLetter(arrayOfWords2, letterE)).toEqual(["Cherry", "Blueberry", "Peach"])
+    })
+})
 
 // Test fails with ReferenceError: findCommonLetter is not defined
 
@@ -108,12 +108,12 @@
 
 
 // ----- Syntax -----
-// const findCommonLetter = (array, letter) => {
-//     return wordsContainingLetter = array.filter(value => {
-//         // I have to include the .toUpperCase() method here, otherwise 'Apple' doesn't get found or returned
-//         return value.includes(letter) || value.includes(letter.toUpperCase())
-//     })
-// }
+const findCommonLetter = (array, letter) => {
+    return wordsContainingLetter = array.filter(value => {
+        // I have to include the .toUpperCase() method here, otherwise 'Apple' doesn't get found or returned
+        return value.includes(letter) || value.includes(letter.toUpperCase())
+    })
+}
 
 // Test passes
 
